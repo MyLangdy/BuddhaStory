@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+.title_bar {
+    background-color: #18191a;
+    box-shadow: 0px 3px 0.6px rgba(128, 128, 128, 0.478);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.menu_button {
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+.title_text {
+    color: white;
+    font-family: kh baphnom limon s1;
+    font-size: 35px;
+}
+.sliding_menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #313036;
+    transform: translateX(-250px);
+    transition: transform 0.3s ease-in-out;
+}
+.menu_cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+.sliding_menu.show_menu .menu_cover {
+    display: block;
+}
+.menu_image {
+    width: 100%;
+}
+.menu_image img {
+    width: 100%;
+    height: auto;
+}
+.sliding_menu ul {
+    list-style-type:none;
+    padding: 20px;
+}
+.sliding_menu ul li {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 18px;
+}
+.sliding_menu ul li a{
+    text-decoration: none;
+    font-family: Koulen;
+    color:white;
+}
+.show_menu {
+    transform: translateX(0);
+}
+@media only screen and (max-width: 600px) {
+    .title_text {
+        font-size: 25px;
+    }
+    .menu_button {
+        font-size: 14px;
+    }
+    .sliding_menu {
+        width: 200px;
+    }
+    .sliding_menu ul li {
+        font-size: 16px;
+    }
+}
+
+/* Book item */
+.book-library {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+}
+
+.book-item {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.book-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.book-item:hover img {
+    transform: scale(1.1);
+}
+
+.book-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.book-title {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+}
+
+/* Popup Box */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .popup-content {
+    position: relative;
+    max-width: 95%;
+    max-height: 95%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .popup-header {
+    padding: 10px;
+    background-color: #f1f1f1;
+  }
+  
+  .popup-title {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .popup-body {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .pdf-iframe {
+    width: 100%;
+    height: 100%;
+  }
