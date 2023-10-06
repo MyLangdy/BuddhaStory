@@ -20,6 +20,9 @@
 .icon{
     font-family: KhmerTitle;
 }
+.title_text{
+    font-family: KhmerTitle;
+}
 .title_bar {
     background-color: #EA7B5F;
     box-shadow: 0px 3px 0.6px #694238(128, 128, 128, 0.478);
@@ -27,7 +30,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    font-family: KhmerFont;
+    font-family:KhmerTitle;
     position: sticky;
     top:0;
     z-index: 9999;
