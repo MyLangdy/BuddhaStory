@@ -1,8 +1,13 @@
+@font-face {
+    font-family: KhmerFont;
+    src: url("font/Kh\ Baphnom\ Limon\ S1.ttf") format("truetype"); /* Replace "KhmerFont.ttf" with the actual font file name and path */
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-align: center;
+    font-family: KhmerFont;
 }
 .title_bar {
     background-color: #18191a;
@@ -11,6 +16,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    font-family: KhmerFont;
 }
 .menu_button {
     color: white;
@@ -71,6 +77,11 @@
     transform: translateX(0);
 }
 @media only screen and (max-width: 600px) {
+    .book-library {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media only screen and (max-width: 600px) {
     .title_text {
         font-size: 25px;
     }
@@ -84,19 +95,24 @@
         font-size: 16px;
     }
 }
-
+/* Book item */
 /* Book item */
 .book-library {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
     justify-items: center;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
 }
 
 .book-item {
     position: relative;
     overflow: hidden;
     text-decoration: none;
+    margin: 10px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .book-item img {
@@ -125,6 +141,13 @@
     font-size: 18px;
     text-align: center;
     color: white;
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    .book-library {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 /* Popup Box */
