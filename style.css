@@ -2,6 +2,14 @@
     font-family: KhmerFont;
     src: url("font/Kh\ Baphnom\ Limon\ S1.ttf") format("truetype"); /* Replace "KhmerFont.ttf" with the actual font file name and path */
 }
+@font-face {
+    font-family: KhmerTitle;
+    src: url("font/Kh\ Ang\ ChittBous.ttf") format("truetype");
+}
+@font-face {
+    font-family: KhKoulen;
+    src: url("font/Koulen.ttf") format("truetype");
+}
 * {
     margin: 0;
     padding: 0;
@@ -9,14 +17,20 @@
     text-align: center;
     font-family: KhmerFont;
 }
+.icon{
+    font-family: KhmerTitle;
+}
 .title_bar {
-    background-color: #18191a;
-    box-shadow: 0px 3px 0.6px rgba(128, 128, 128, 0.478);
+    background-color: #EA7B5F;
+    box-shadow: 0px 3px 0.6px #694238(128, 128, 128, 0.478);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
     font-family: KhmerFont;
+    position: sticky;
+    top:0;
+    z-index: 9999;
 }
 .menu_button {
     color: white;
@@ -36,9 +50,10 @@
     left: 0;
     width: 250px;
     height: 100%;
-    background-color: #313036;
+    background-color: #f1f1f1;
     transform: translateX(-250px);
     transition: transform 0.3s ease-in-out;
+    z-index: 100000;
 }
 .menu_cover {
     position: absolute;
@@ -65,13 +80,16 @@
 }
 .sliding_menu ul li {
     margin-bottom: 20px;
-    color: white;
+    color: #EA7B5F;
     font-size: 18px;
 }
 .sliding_menu ul li a{
     text-decoration: none;
-    font-family: Koulen;
-    color:white;
+    font-family:KhKoulen;
+    color:#EA7B5F;
+}
+.sliding_menu ul li p{
+    font-family: KhmerFont;
 }
 .show_menu {
     transform: translateX(0);
@@ -126,22 +144,27 @@
 }
 
 .book-details {
-    position: absolute;
-    bottom: 0;
+    /* position: absolute; */
+    /* bottom: 0; */
     left: 0;
     width: 100%;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+    height: auto;
+    padding: 5px;
+    background-color: #EA7B5F;
     transition: opacity 0.3s ease-in-out;
     opacity: 1;
 }
 
 .book-title {
     margin: 0;
+    width: 100%;
     font-size: 18px;
     text-align: center;
     color: white;
-    width: 100%;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    z-index: 2; 
 }
 
 @media only screen and (min-width: 600px) {
